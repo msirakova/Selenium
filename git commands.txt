@@ -1,0 +1,49 @@
+- repository (source control repository)- a server that stores the files
+ also keep a change log
+- revision, version - indovodual version (state) of a document
+that is a result of multiple changes
+- check out, clone - retrieves a working copy of the files from a remote repository into a local directory
+-update, get latest version, fetch / pull - download the latest version of the files from the repository to a local working directory + merge the conflicting files
+- undo check-out, revert / undo changes - cancel the local changes, restore their state from the repository
+trunk - unique line of development that is not a branch(a.k.a Baseline, Mainline or Master)
+-branch / branching - division of the repositories in a number of separate workflows
+- conflict - occurs when different people make changes to the same code and the system is unable to resolve the changes automatically
+
+Git - distributed source-control system, work with local and remote repositories
+Git bash - command line interface for Git
+
+Basic Git commands
+
+git status - check the status of your local repository
+git init - create a new local repository (in the current directory)
+git remote add [remote name][remote url] - creating a remote (assign a short name for remote git url)
+git push [remote name][local name] - pushing to a remote (sending changes to a remote repository)
+
+- show log: 
+git log -10 --oneline
+- create new branch:
+git branch feature/my-func
+git checkout -b feature/my-func master
+- show all branches:
+git branch --all
+master
+*feauture/my-func
+-switch branch:
+git checkout feature/my-func
+-fetch:
+git fetch --all --prune
+
+example:
+mkdir work
+cd work
+git clone https://github.com/SoftUni/test.git
+dir
+cd test
+dir
+git status
+(edit some file)
+git status
+git add.
+git commit -m "changes"
+git push
+====================================
