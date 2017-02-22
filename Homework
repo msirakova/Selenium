@@ -1,0 +1,68 @@
+package com.company;
+
+import java.text.DateFormat;
+import java.text.MessageFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        //Problems 6,7;
+
+        String name = "Pesho";
+        int age = 28;
+        double height = 1.84;
+
+        System.out.println("My name is " + name);
+
+        //Problem 8;
+        int x = 123122;
+        int y = 165546;
+
+        int result = x + y;
+        System.out.println("The result is " + result);
+
+        // Problem 9
+
+        //-	Print on the console the current date
+
+        DateFormat dateFormat = new SimpleDateFormat("dd/mm/yyyy HH:mm:ss");
+        Date date = new Date();
+        System.out.println(dateFormat.format(date));
+
+        //-	Print on the console the date after 20 hours
+
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.HOUR, 20);
+        System.out.println("After 20 Hours will be: " + dateFormat.format(cal.getTime()));
+
+        //-	Print on the console the product of two “double” variables declared by you
+
+        double varOne = 3.5;
+        double varTwo = 2.8;
+        System.out.println(MessageFormat.format("The product of {0} and {1} is {2}", varOne, varTwo, varOne * varTwo));
+
+        //--	Read from the console an user input which should be numeric. Sum it with 10 and print on the console the sum -
+
+        // -	Read from the console two numbers. Print on the console their product (e.g. Read “4” and “20”, Print “80”)
+
+        Scanner in = new Scanner(System.in);
+        int input = in.nextInt();
+        System.out.println("Sum is " + (input + 10));
+        int firstNumber = in.nextInt();
+        int secondNumber = in.nextInt();
+        int secondResult = firstNumber * secondNumber;
+        System.out.println(MessageFormat.format(("The product of {0} and {1} is {2}"), firstNumber,secondNumber,secondResult));
+
+        //-	Print on the console the numbers from 1 to 1000. You may need to use loops.
+
+        for(int i = 1; i<=1000; i++){
+            System.out.println(i);
+        }
+
+
+    }
+}
